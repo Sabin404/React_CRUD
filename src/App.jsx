@@ -5,7 +5,6 @@ import SingleProduct from './pages/singleProduct/SingleProduct'
 import Edit from './pages/editProduct/Edit'
 import AddProduct from './pages/addProduct/AddProduct'
 function App() {
-const name='Sabin'
   return (
     <BrowserRouter>
       <Routes>
