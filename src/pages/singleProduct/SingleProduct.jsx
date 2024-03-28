@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams,Link } from 'react-router-dom'
 import './single.css'
 
 const SingleProduct = () => {
@@ -31,6 +31,8 @@ const SingleProduct = () => {
     fetchProduct();
   }, [])
 
+
+
   return (
     <>
       <Navbar />
@@ -43,7 +45,7 @@ const SingleProduct = () => {
           <p class="product-description">{product.Description}</p>
           <p class="product-price">${product.Price}</p>
           <button class="add-to-cart-btn" onClick={deleteProduct}>DELETE</button>
-          <button class="add-to-cart-btn" style={{ margin: '10px' }}>EDIT</button>
+          <Link  className="add-to-cart-btn " to={`/editproduct/${id}`} >Edit</Link>
         </div>
       </div>
     </>
